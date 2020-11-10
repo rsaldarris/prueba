@@ -32,7 +32,18 @@
                                 <b>@lang('messages.productPrice')</b>: <input type="text" placeholder="@lang('messages.productPrice')" name="price" value="{{ old('price') }}" />
                             </p>
                             <br><p>
-                                <b>@lang('messages.productCategory')</b>: <input type="text" placeholder="@lang('messages.productCategory')" name="category" value="{{ old('category') }}" />
+                                <b>@lang('messages.productCategory')</b>: 
+                                <!-- <input type="text" placeholder="@lang('messages.productCategory')" name="category" value="{{ old('category') }}" /> -->
+                                <select name="category">
+                                    <option value="Cupcakes">@lang('messages.Cupcakes')</option> 
+                                    <option value="Trufas" {{ (old("category") == "Trufas") ? "selected" : ""}}>@lang('messages.Trufas')</option> 
+                                    <option value="Chocolates" {{ (old("category") == "Chocolates") ? "selected" : ""}}>@lang('messages.Chocolates')</option>
+                                    <option value="Galletas" {{ (old("category") == "Galletas") ? "selected" : ""}}>@lang('messages.Galletas')</option>
+                                    <option value="Panes" {{ (old("category") == "Panes") ? "selected" : ""}}>@lang('messages.Panes')</option>
+                                    <option value="Tortas" {{ (old("category") == "Tortas") ? "selected" : ""}}>@lang('messages.Tortas')</option>
+                                    <option value="Alfajores" {{ (old("category") == "Alfajores") ? "selected" : ""}}>@lang('messages.Alfajores')</option>
+                                    <option value="Macarons" {{ (old("category") == "Macarons") ? "selected" : ""}}>@lang('messages.Macarons')</option>
+                                </select>
                             </p>
                             <br><p>
                                 <b>@lang('messages.productDescription')</b>:<br>

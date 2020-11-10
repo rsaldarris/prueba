@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Order;
 use App\Item;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Lang;
 
 class ProductController extends Controller {
@@ -137,9 +139,9 @@ class ProductController extends Controller {
         foreach($productsModels as $product)
         {
             array_push($prName,$product->getName());
+            array_push($prId,$product->getId());
             $total = $val * $product->getPrice();
             array_push($prPrice,number_format($total, 2, '.', ''));
-            array_push($prId,$product->getId());
             $precio += $request->session()->get("products")[$product->getId()] * number_format($total, 2, '.', '');
         }
         $data["products"] = $productsModels;
@@ -154,6 +156,7 @@ class ProductController extends Controller {
     public function buy(Request $request){
         $order = new Order();
         $order->setTotal("0");
+        $order->setUserId(Auth::user()->id);
         $order->save();
         $precioTotal = 0;
 
@@ -180,6 +183,7 @@ class ProductController extends Controller {
         $order = new Order();
         $order->setTotal("0");
         $order->save();
+        $userid = $request->input("pdf");
         $data = [];
         $data['products'] = [];
 
@@ -195,7 +199,7 @@ class ProductController extends Controller {
                 $item['product'] = Product::find($keys[$i]);
                 $item['order'] = $order;
                 $item['quantity'] = $products[$keys[$i]];
-
+                $item['userid']= $userid;
                 array_push($data['products'], $item);
                 $productActual = Product::find($keys[$i]);
                 $precioTotal = $precioTotal + $productActual->getPrice()*$products[$keys[$i]];

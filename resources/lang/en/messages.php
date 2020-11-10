@@ -72,9 +72,32 @@ return [
     'purchaseDone' => 'Purchase done',
     'deleteComment' => 'Comment deleted',
     'commentCreated' => 'Comment created',
+    'order_receipt' => 'Order Receipt',
+    'order_number' => 'Order Number',
+    'total-sub-price' => 'Total sub price',
+    'total-price' => 'Total price',
+    'pdf' => 'Download as PDF',
+    'Tortas' => 'Cakes',
+    'Cupcakes' => 'Cupcakes',
+    'Trufas' => 'Trufles',
+    'Chocolates' => 'Chocolates',
+    'Galletas' => 'Cookies',
+    'Panes' => 'Breads',
+    'Alfajores' => 'Caramel cookies',
+    'Macarons' => 'Macarons',
     'ir' => 'Go',
     'newPost' => 'NEW POST',
-    'newProduct' => 'NEW PRODUCT'
+    'newProduct' => 'NEW PRODUCT',
+    'toUSD' => 'To USD',
+    'allies' => 'Allies',
+    'alDescription' => 'Description',
+    'alCategories' => 'Categories',
+    'alContributors' => 'Contributoss',
+    'alPrice' => 'Price',
+    'alSeeMore' => 'See more',
+    'orderno' => 'You have no orders',
+    'myOrders' => 'My orders',
+    'order' => 'Order'
     //test
 ];
 

@@ -15,7 +15,6 @@ class Item extends Model
     public function getId(){
         return $this->attributes['id'];
     }
-    
 
     public function setId($id){
         $this->attributes['id'] = $id;
