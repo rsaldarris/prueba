@@ -13,6 +13,7 @@ RUN composer install \
     --prefer-dist
 RUN composer update
 RUN composer require barryvdh/laravel-dompdf
+RUN composer require maatwebsite/excel
 RUN php artisan key:generate
 RUN php artisan migrate
 RUN chmod -R 777 storage

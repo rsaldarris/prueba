@@ -107,6 +107,11 @@ return [
     'editProfile'=>'Editar Perfil',
     'notAccess'=>'No puedes acceder a esta funcion',
     'userList'=>'Lista Usuarios',
+    'pdf' => 'PDF',
+    'excel' => 'Excel',
+    'purchase_made' => 'Compra Realizada',
+    'download' => 'Descarga',
+    'return' => 'Regresar',
     //test
 ];
 
