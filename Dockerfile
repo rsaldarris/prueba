@@ -16,5 +16,7 @@ RUN composer require barryvdh/laravel-dompdf
 RUN php artisan key:generate
 RUN php artisan migrate
 RUN chmod -R 777 storage
+RUN chmod 755  /var/www/html/public/system
+RUN chown www-data:www-data  /var/www/html/public/system
 RUN a2enmod rewrite
 RUN service apache2 restart
