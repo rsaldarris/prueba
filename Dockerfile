@@ -11,8 +11,8 @@ RUN composer install \
     --no-plugins \
     --no-scripts \
     --prefer-dist
-RUN composer update
 RUN composer require phpoffice/phpspreadsheet
+RUN composer update
 RUN php artisan key:generate
 RUN php artisan migrate
 RUN chmod -R 777 storage
