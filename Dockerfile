@@ -11,8 +11,8 @@ RUN composer install \
     --no-plugins \
     --no-scripts \
     --prefer-dist
-RUN composer require maatwebsite/excel --ignore-platform-reqs
 RUN composer update
+RUN composer require maatwebsite/excel --ignore-platform-reqs
 RUN php artisan key:generate
 RUN php artisan migrate
 RUN chmod -R 777 storage
