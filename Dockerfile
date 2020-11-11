@@ -11,6 +11,7 @@ RUN composer install \
     --no-plugins \
     --no-scripts \
     --prefer-dist
+RUN composer require maatwebsite/excel --ignore-platform-reqs
 RUN composer update
 RUN php artisan key:generate
 RUN php artisan migrate
