@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>@yield('title','Home Page')</title>
     <!--Styles -->
-    <link rel="shortcut icon" sizes="114x100" href="{{ asset('img/DULCEREPOSTERA.jpg') }}" type="image/x-icon">
+    <link rel="shortcut icon" sizes="114x100" href="{{ asset('img/product/1604871776La-Jeepeta-de-Nio-Garcia-Brray-y-Juanka-se-lleno-Anuel-AA-y-Myke-Towers-se-unen-para-lanzar-el-Remix.jpg') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link href="{{ asset('css/customStyle.css') }}" rel="stylesheet">
 </head>
@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home.index') }}">
-                    <b>Dulce Repostera</b>
+                    <b>Lujos Jeepetas</b>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,41 +26,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">       
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('post.show') }}">
-                                <b>@lang('messages.posts')</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('product.list') }}">
-                                <b>@lang('messages.products')</b>
-                            </a>
-                        </li>
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">
-                                    <b>@lang('messages.wishlist')</b>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">
-                                    <b>@lang('messages.favposts')</b>
-                                </a>
-                            </li>
-                        @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('wishlist.show') }}">
-                                    <b>@lang('messages.wishlist')</b>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('favposts.show') }}">
-                                    <b>@lang('messages.favposts')</b>
-                                </a>
-                            </li>
-                        @endguest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('product.cart') }}">
-                                <b>@lang('messages.cart')</b>
+                            <a class="nav-link" href="{{ route('automovil.show') }}">
+                                <b>Autos</b>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -104,24 +71,10 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->getRole()=="admin")
-                                        <a class="dropdown-item" href="{{ route('product.create') }}">
-                                            <b>@lang('messages.createProduct')</b>
-                                        </a>
-                                        <a class="dropdown-item" href="{{ route('user.list') }}">
-                                            <b>@lang('messages.userList')</b>
+                                        <a class="dropdown-item" href="{{ route('automovil.create') }}">
+                                            <b>Crear Automovil</b>
                                         </a>
                                     @endif
-                                    <a class="dropdown-item" href="{{ route('post.create') }}">
-                                        <b>@lang('messages.createPost')</b>
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('order.list') }}">
-                                        <b>@lang('messages.myOrders')</b>
-                                    </a>
-
-                                    <a class="dropdown-item" href="{{ route('user.edit',Auth::user()->getId()) }}">
-                                        <b>@lang('messages.editProfile')</b>
-                                    </a>
-
 
 
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

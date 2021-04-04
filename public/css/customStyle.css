@@ -7,8 +7,8 @@
 }
 
 #button_go{
-    background-color: pink;
-    border-color: pink;
+    background-color: blue;
+    border-color: blue;
     color: black;
     font-weight: bold;
 	width: 150px;
@@ -16,8 +16,8 @@
 }
 
 #button_add{
-    background-color: pink;
-    border-color: pink;
+    background-color: blue;
+    border-color: blue;
     color: black;
     font-weight: bold;
 	width: 300px;
@@ -25,8 +25,8 @@
 }
 
 #button_save{
-    background-color: pink;
-    border-color: pink;
+    background-color: blue;
+    border-color: blue;
     color: black;
     font-weight: bold;
 	width: 100px;
@@ -34,16 +34,16 @@
 }
 
 #button_login{
-    background-color: pink;
-    border-color: pink;
+    background-color: blue;
+    border-color: blue;
 	color: black;
 	width: 80px;
 	height: 40px;
 }
 
 #button_register{
-    background-color: pink;
-    border-color: pink;
+    background-color: blue;
+    border-color: blue;
 	color: black;
 	width: 120px;
 	height: 40px;
@@ -72,7 +72,7 @@
     position: fixed;
     z-index: 1;
     top: 0; 
-    background-color: pink; 
+    background-color: blue; 
     padding-top: 45px;
 }
   
@@ -125,7 +125,7 @@
 }
 
 nav{
-    background-color: pink;
+    background-color: blue;
 }
 
 .rate {

@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 padding-20">
             <div class="card">
-                <h5 class="card-header" style="color: deeppink;" style="text-align: center;">@lang('messages.register')</h5>
+                <h5 class="card-header" style="color: blue;" style="text-align: center;">@lang('messages.register')</h5>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

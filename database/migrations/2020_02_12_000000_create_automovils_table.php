@@ -1,12 +1,11 @@
 <?php
 
-//Created by: Santiago Albisser
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreateAutomovilsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,12 +14,14 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('automovils', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('name');
-            $table->text('description');
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->text('placa')->unique();
+            $table->text('marca');
+            $table->text('modelo');
+            $table->float('valor_comercial');
+            $table->float('valor_alquiler');
+            $table->text('disponible');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('automovils');
     }
 }

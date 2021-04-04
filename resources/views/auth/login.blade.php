@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 padding-20">
             <div class="card">
-                <h5 class="card-header" style="color: deeppink;">@lang('messages.login')</h5>
+                <h5 class="card-header" style="color: blue;">@lang('messages.login')</h5>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -60,7 +60,7 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" style="color:deeppink;" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link" style="color:blue;" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
